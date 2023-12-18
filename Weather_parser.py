@@ -1,7 +1,7 @@
 import requests
 import json
 
-weather_emojis = {
+weather_emojis = { # Emojis for weather
     "clear sky": "☀️",
     "few clouds": "🌤️",
     "scattered clouds": "🌥️",
@@ -14,7 +14,7 @@ weather_emojis = {
     "fog": "🌫️"
 }
 
-def weather_translate(data: dict) -> str:
+def weather_translate(data: dict) -> str: # Translate weather data to human-readable format
     city = data['name']
     temp = data['main']['temp']
     feels_like = data['main']['feels_like']
@@ -33,14 +33,14 @@ def weather_translate(data: dict) -> str:
         custom_message = "It's really hot! Don't forget to stay hydrated! 🥤"
 
     return f"Weather in {city}:\n{weather_description} {emoji}\nTemperature: {temp:.2f}°C\nFeels like: {feels_like:.2f}°C\n{custom_message}"
-def get_weather_data(city: str, api_token: str) -> dict:
+def get_weather_data(city: str, api_token: str) -> dict: # Get weather data from OpenWeatherMap API
     """
     Get weather data from OpenWeatherMap API
     :param city: city name
     :param api_token: API token
     :return: weather data
     """
-    try:
+    try: # JSON Parsing
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_token}&units=metric"
         response = requests.get(url)
         data = json.loads(response.text)

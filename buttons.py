@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, KeyboardButton
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 
-async def more_info_keyboard():
+async def more_info_keyboard(): # Keyboard for more info
     more_kb = InlineKeyboardBuilder()
     more_kb.add(InlineKeyboardButton(text='💧 Humidity', callback_data='humidity'))
     more_kb.add(InlineKeyboardButton(text='🌫️ Pressure', callback_data='pressure'))

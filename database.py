@@ -9,11 +9,11 @@ async_session = async_sessionmaker(engine)
 class Base(AsyncAttrs, DeclarativeBase):
     pass
 
-class User(Base):
+class User(Base): # User model to store every unique user id
     __tablename__ = 'users'
     id: Mapped[int] = mapped_column(primary_key=True)
     tg_id = mapped_column(BigInteger, unique=True)
 
-async def async_main():
+async def async_main(): # Create tables in the database
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
