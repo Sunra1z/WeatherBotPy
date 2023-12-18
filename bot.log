@@ -16,3 +16,906 @@ INFO:aiogram.event:Update id=237724982 is handled. Duration 1468 ms by bot id=67
 INFO:aiogram.event:Update id=237724983 is handled. Duration 608 ms by bot id=6702281548
 INFO:aiogram.dispatcher:Polling stopped
 INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237724984 is handled. Duration 843 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724985 is handled. Duration 438 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237724986 is handled. Duration 672 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724987 is handled. Duration 906 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724988 is handled. Duration 1141 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724989 is handled. Duration 968 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724990 is handled. Duration 858 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724991 is handled. Duration 936 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237724992 is handled. Duration 1032 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724993 is handled. Duration 1467 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237724994 is not handled. Duration 750 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237724994 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237724995 is not handled. Duration 657 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237724995 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237724996 is not handled. Duration 719 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237724996 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237724997 is not handled. Duration 718 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237724997 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237724998 is not handled. Duration 686 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237724998 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237724999 is not handled. Duration 1405 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237724999 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725000 is not handled. Duration 656 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725000 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 38, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725001 is handled. Duration 797 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725002 is handled. Duration 1250 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725003 is handled. Duration 1157 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725004 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725005 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725006 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725007 is handled. Duration 625 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725008 is handled. Duration 1250 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725009 is not handled. Duration 703 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725009 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 42, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725010 is not handled. Duration 719 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725010 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 42, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725011 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725012 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725013 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725014 is handled. Duration 578 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725015 is handled. Duration 1250 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725016 is not handled. Duration 688 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725016 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 41, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725017 is not handled. Duration 717 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725017 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 41, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725018 is not handled. Duration 672 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725018 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 41, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725019 is not handled. Duration 718 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725019 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 41, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.event:Update id=237725020 is not handled. Duration 1437 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725020 by bot id=6702281548
+KeyError: 'main'
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 41, in show_humidity
+    await call.message.answer(f"Current humidity: {data['main']['humidity']}%")
+                                                   ~~~~^^^^^^^^
+KeyError: 'main'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725023 is handled. Duration 516 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725024 is handled. Duration 827 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725025 is handled. Duration 984 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725026 is handled. Duration 844 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725027 is handled. Duration 422 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725028 is not handled. Duration 0 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725029 is handled. Duration 329 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725030 is handled. Duration 1077 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725031 is handled. Duration 827 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725032 is handled. Duration 516 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725033 is handled. Duration 1343 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725034 is handled. Duration 875 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725035 is handled. Duration 875 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725036 is handled. Duration 1047 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725037 is handled. Duration 718 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725038 is handled. Duration 1156 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725039 is handled. Duration 1391 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725040 is handled. Duration 813 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725041 is handled. Duration 890 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725042 is handled. Duration 889 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725043 is handled. Duration 858 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725044 is handled. Duration 1110 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725045 is handled. Duration 1969 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725046 is handled. Duration 1016 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725047 is handled. Duration 1233 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725048 is handled. Duration 641 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725049 is handled. Duration 1188 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725050 is handled. Duration 811 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725051 is handled. Duration 1406 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725052 is handled. Duration 890 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725053 is handled. Duration 875 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725054 is handled. Duration 890 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725055 is handled. Duration 938 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725056 is handled. Duration 1375 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
