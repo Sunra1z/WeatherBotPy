@@ -9,6 +9,8 @@ import buttons
 from config import WEATHER_API_TOKEN
 from Weather_parser import get_weather_data, weather_translate, weather_emojis
 from datetime import datetime
+from database import async_session, User
+from sqlalchemy.exc import IntegrityError
 
 router = Router()
 
@@ -24,6 +26,18 @@ async def cmd_start(message: Message, state: FSMContext):
 async def get_weather(message: Message, state: FSMContext):
     data = get_weather_data(message.text, WEATHER_API_TOKEN)
     if data and data['cod'] == 200:
+        async with async_session() as session:
+            user = await session.get(User, message.from_user.id)
+            if user is None:
+                # If the user does not exist in the database, create a new User object
+                user = User(tg_id=message.from_user.id)
+                try:
+                    session.add(user)
+                    await session.commit()
+                except IntegrityError:
+                    await session.rollback()
+            user.city = message.text  # Update the user's city
+            await session.commit()
         await state.update_data(city=message.text)
         await message.answer(weather_translate(data))
         await message.answer('You can look for more info or enter other city', reply_markup=await buttons.more_info_keyboard())

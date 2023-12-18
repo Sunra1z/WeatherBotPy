@@ -919,3 +919,973 @@ INFO:aiogram.event:Update id=237725055 is handled. Duration 938 ms by bot id=670
 INFO:aiogram.event:Update id=237725056 is handled. Duration 1375 ms by bot id=6702281548
 INFO:aiogram.dispatcher:Polling stopped
 INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725057 is handled. Duration 1094 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00022s] (698657289,)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:aiogram.event:Update id=237725058 is not handled. Duration 718 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725058 by bot id=6702281548
+OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 29, in get_weather
+    user = await session.get(User, message.from_user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 602, in get
+    return await greenlet_spawn(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3653, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3833, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 690, in load_on_pk_identity
+    session.execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725059 is handled. Duration 1000 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:aiogram.event:Update id=237725060 is not handled. Duration 750 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725060 by bot id=6702281548
+OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 29, in get_weather
+    user = await session.get(User, message.from_user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 602, in get
+    return await greenlet_spawn(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3653, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3833, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 690, in load_on_pk_identity
+    session.execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725061 is handled. Duration 734 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:aiogram.event:Update id=237725062 is not handled. Duration 688 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725062 by bot id=6702281548
+OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.OperationalError: no such table: users
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 29, in get_weather
+    user = await session.get(User, message.from_user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 602, in get
+    return await greenlet_spawn(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 190, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3653, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3833, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 690, in load_on_pk_identity
+    session.execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2190, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: users
+[SQL: SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("users")
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+INFO:sqlalchemy.engine.Engine:PRAGMA temp.table_info("users")
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+INFO:sqlalchemy.engine.Engine:
+CREATE TABLE users (
+	id INTEGER NOT NULL, 
+	tg_id BIGINT, 
+	PRIMARY KEY (id), 
+	UNIQUE (tg_id)
+)
+
+
+INFO:sqlalchemy.engine.Engine:[no key 0.00012s] ()
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725063 is handled. Duration 547 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:INSERT INTO users (id, tg_id) VALUES (?, ?)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289, None)
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.event:Update id=237725064 is handled. Duration 1046 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725065 is handled. Duration 1202 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725066 is handled. Duration 875 ms by bot id=6702281548
+INFO:aiogram.event:Update id=237725067 is handled. Duration 1703 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 37.11s ago] (698657289,)
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.event:Update id=237725068 is handled. Duration 1015 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("users")
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725069 is handled. Duration 625 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:INSERT INTO users (tg_id) VALUES (?)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.event:Update id=237725070 is handled. Duration 1077 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("users")
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725071 is handled. Duration 655 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00022s] (698657289,)
+INFO:sqlalchemy.engine.Engine:INSERT INTO users (tg_id) VALUES (?)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:aiogram.event:Update id=237725072 is not handled. Duration 671 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725072 by bot id=6702281548
+IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.tg_id
+[SQL: INSERT INTO users (tg_id) VALUES (?)]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: users.tg_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 35, in get_weather
+    await session.commit()
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 1011, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    result = context.switch(value)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1969, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1256, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1231, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.tg_id
+[SQL: INSERT INTO users (tg_id) VALUES (?)]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[cached since 14.13s ago] (698657289,)
+INFO:sqlalchemy.engine.Engine:INSERT INTO users (tg_id) VALUES (?)
+INFO:sqlalchemy.engine.Engine:[cached since 14.13s ago] (698657289,)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:aiogram.event:Update id=237725073 is not handled. Duration 734 ms by bot id=6702281548
+ERROR:aiogram.event:Cause exception while process update id=237725073 by bot id=6702281548
+IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.tg_id
+[SQL: INSERT INTO users (tg_id) VALUES (?)]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlite3.IntegrityError: UNIQUE constraint failed: users.tg_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 144, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 116, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 111, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 136, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\message_handlers.py", line 35, in get_weather
+    await session.commit()
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 1011, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    result = context.switch(value)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1969, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1256, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 1231, in _prepare_impl
+    self.session.flush()
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4312, in flush
+    self._flush(objects)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4447, in _flush
+    with util.safe_reraise():
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 4408, in _flush
+    flush_context.execute()
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\orm\persistence.py", line 1226, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1416, in execute
+    return meth(
+           ^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 516, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1639, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1848, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1988, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2343, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1969, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 922, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 146, in execute
+    self._adapt_connection._handle_exception(error)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 298, in _handle_exception
+    raise error
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\dialects\sqlite\aiosqlite.py", line 128, in execute
+    self.await_(_cursor.execute(operation, parameters))
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 125, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 185, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 48, in execute
+    await self._execute(self._cursor.execute, sql, parameters)
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\cursor.py", line 40, in _execute
+    return await self._conn._execute(fn, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 133, in _execute
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\tokae\PycharmProjects\WeatherBotPy\.venv\Lib\site-packages\aiosqlite\core.py", line 106, in run
+    result = function()
+             ^^^^^^^^^^
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: users.tg_id
+[SQL: INSERT INTO users (tg_id) VALUES (?)]
+[parameters: (698657289,)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:PRAGMA main.table_info("users")
+INFO:sqlalchemy.engine.Engine:[raw sql] ()
+INFO:sqlalchemy.engine.Engine:COMMIT
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @debug_weather_bot id=6702281548 - 'DebugWeather'
+INFO:aiogram.event:Update id=237725074 is handled. Duration 530 ms by bot id=6702281548
+INFO:sqlalchemy.engine.Engine:BEGIN (implicit)
+INFO:sqlalchemy.engine.Engine:SELECT users.id AS users_id, users.tg_id AS users_tg_id 
+FROM users 
+WHERE users.id = ?
+INFO:sqlalchemy.engine.Engine:[generated in 0.00021s] (698657289,)
+INFO:sqlalchemy.engine.Engine:INSERT INTO users (tg_id) VALUES (?)
+INFO:sqlalchemy.engine.Engine:[generated in 0.00022s] (698657289,)
+INFO:sqlalchemy.engine.Engine:ROLLBACK
+INFO:aiogram.event:Update id=237725075 is handled. Duration 1031 ms by bot id=6702281548
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @debug_weather_bot id=6702281548 - 'DebugWeather'

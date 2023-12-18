@@ -1,14 +1,14 @@
 import asyncio
-import os
-import datetime
-import requests
 import logging
+
 from aiogram import Bot, Dispatcher
 from message_handlers import router
 from config import TG_TOKEN
+from database import async_main
 
 bot = Bot(token=TG_TOKEN)
 async def main():
+    await async_main()
     bot = Bot(token=TG_TOKEN)
     dp = Dispatcher()
     dp.include_router(router)
